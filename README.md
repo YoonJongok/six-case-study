@@ -5,7 +5,7 @@
 #### Plan
 
 - [x] git
-- [] setup eslint, prettier, husky -
+- [x] setup eslint, prettier, husky -
 - [] setup tailwindcss w/ headlessUI
 - [] setup storybook
 - [] setup fetch interceptor
