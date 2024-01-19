@@ -6,15 +6,16 @@
 
 - [x] git
 - [x] setup eslint, prettier, husky -
-- [] setup tailwindcss w/ headlessUI
+- [x] setup tailwindcss w/ headlessUI
+- Design system
+  - [x] Typography & storybook
+  - [] ...
 - [] setup storybook
 - [] setup fetch interceptor
 - [] setup next auth
 - [] set protected route with middleware
 - [] set zustand for stage management
-- [] Design system
-  - [] Typography & storybook
-  - [] ...
+
 - Generic Table
   - [] pagination
   - [] tab filter
