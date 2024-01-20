@@ -6,7 +6,7 @@ const Layout = ({ children }: PropsWithChildren) => {
   return (
     <>
       <Header />
-      <main className='flex min-h-screen-minus-header'>
+      <main className='flex min-h-screen-minus-header bg-gray-100'>
         <Sidebar />
         {children}
       </main>

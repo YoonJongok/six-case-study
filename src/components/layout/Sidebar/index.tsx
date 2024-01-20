@@ -40,7 +40,7 @@ const sideBarConfig = [
 
 const Sidebar = () => {
   return (
-    <div className='min-h-screen-minus-header h-full  w-[220px] flexCol items-center shadow-md'>
+    <div className='min-h-screen-minus-header h-full  w-[220px] flexCol items-center shadow-md bg-white'>
       {sideBarConfig.map((config) => {
         if (config.nested) {
           return (
