@@ -3,6 +3,9 @@
 @tailwind utilities;
 
 @layer base {
+  :root {
+    --header-height: 60px;
+  }
   body {
     @apply min-h-screen;
   }
@@ -23,5 +26,8 @@
   }
   .flexColCenter {
     @apply flexCol justify-center items-center;
+  }
+  .min-h-screen-minus-header {
+    @apply min-h-[calc(100vh-var(--header-height))];
   }
 }

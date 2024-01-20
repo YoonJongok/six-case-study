@@ -1,11 +1,14 @@
 import React from 'react';
-import Typography from '@/components/shared/atoms/Typography';
+import Sidebar from '@/components/layout/Sidebar';
 
 const HomePage = () => {
   return (
-    <main className='flexColCenter min-h-screen p-24'>
-      <Typography type='title1'>Welcome to</Typography>
-    </main>
+    <>
+      <main className='flex min-h-screen-minus-header'>
+        <Sidebar />
+        {/* <Typography type='title1'>Welcome to</Typography> */}
+      </main>
+    </>
   );
 };
 
