@@ -1,5 +1,7 @@
 import React from 'react';
 import GeneralInfo from '@/components/features/Analytics/GeneralInfo';
+import DoughnutChart from '@/components/shared/DoughnutChart';
+import OverviewCard from '@/components/shared/OverviewCard';
 import Typography from '@/components/shared/atoms/Typography';
 
 const Analytics = () => {
@@ -10,7 +12,9 @@ const Analytics = () => {
       </Typography>
       <section className='grid grid-cols-3 gap-6 items-center'>
         <GeneralInfo />
-        <GeneralInfo />
+        <OverviewCard title='Color ratio (Doughnut chart)'>
+          <DoughnutChart />
+        </OverviewCard>
         <GeneralInfo />
       </section>
     </div>

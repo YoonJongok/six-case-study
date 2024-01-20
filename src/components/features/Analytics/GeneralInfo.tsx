@@ -4,43 +4,38 @@ import Typography from '../../shared/atoms/Typography';
 
 const GeneralInfo = () => {
   return (
-    <article className='w-full flexCol items-start gap-2'>
-      <Typography type='title2' className='capitalize'>
-        General Information
-      </Typography>
-      <OverviewCard>
-        {generalInfoConfig.map((config) => {
-          return (
-            <div key={config.label} className='flexCol gap-1'>
-              <Typography type='body1' className='capitalize font-normal'>
-                {config.label}
+    <OverviewCard title={'General Information'}>
+      {generalInfoConfig.map((config) => {
+        return (
+          <div key={config.label} className='flexCol gap-1'>
+            <Typography type='body1' className='capitalize font-normal'>
+              {config.label}
+            </Typography>
+            <div>
+              <Typography type='title2' className='capitalize'>
+                {config.value}
               </Typography>
-              <div>
-                <Typography type='title2' className='capitalize'>
-                  {config.value}
-                </Typography>
-                {config?.subInfo && (
-                  <div className='max-w-[270px] flex justify-between'>
-                    {config.subInfo.map((subInfoConfig, i) => {
-                      return (
-                        <div key={i} className='flex items-center gap-1'>
-                          <Typography type='caption2' className='capitalize'>
-                            {subInfoConfig.label}:
-                          </Typography>
-                          <Typography type='caption2' className='capitalize'>
-                            {subInfoConfig.value}
-                          </Typography>
-                        </div>
-                      );
-                    })}
-                  </div>
-                )}
-              </div>
+              {config?.subInfo && (
+                <div className='max-w-[270px] flex justify-between'>
+                  {config.subInfo.map((subInfoConfig, i) => {
+                    return (
+                      <div key={i} className='flex items-center gap-1'>
+                        <Typography type='caption2' className='capitalize'>
+                          {subInfoConfig.label}:
+                        </Typography>
+                        <Typography type='caption2' className='capitalize'>
+                          {subInfoConfig.value}
+                        </Typography>
+                      </div>
+                    );
+                  })}
+                </div>
+              )}
             </div>
-          );
-        })}
-      </OverviewCard>
-    </article>
+          </div>
+        );
+      })}
+    </OverviewCard>
   );
 };
 
