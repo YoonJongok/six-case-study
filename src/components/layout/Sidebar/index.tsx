@@ -2,20 +2,29 @@ import React from 'react';
 import CollapseSection from './CollapseSection';
 import SideBarLink from './SidebarLink';
 
-export type SideBar = {
+export type NestedSideBar = {
   name: string;
   href: string;
-  nested?: SideBar[];
+};
+
+export type SideBar = {
+  name: string;
+  href?: string;
+  nested?: NestedSideBar[];
 };
 
 const sideBarConfig = [
+  {
+    name: 'Analytics',
+    href: '/',
+  },
   {
     name: 'Search',
     href: '/search',
   },
   {
-    name: 'Overview',
-    href: '/',
+    name: 'Specific',
+    href: '/overview',
     nested: [
       {
         name: 'Overview1',
@@ -23,10 +32,6 @@ const sideBarConfig = [
       },
       {
         name: 'Overview2',
-        href: '/',
-      },
-      {
-        name: 'Overview3',
         href: '/',
       },
     ],

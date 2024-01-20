@@ -1,5 +1,4 @@
 import type { Metadata } from 'next';
-import Header from '@/components/layout/Header';
 import '@/styles/globals.css';
 import { pretendardVariable } from '@/styles/fonts';
 
@@ -15,10 +14,7 @@ export default function RootLayout({
 }>) {
   return (
     <html lang='en'>
-      <body className={pretendardVariable.className}>
-        <Header />
-        {children}
-      </body>
+      <body className={pretendardVariable.className}>{children}</body>
     </html>
   );
 }

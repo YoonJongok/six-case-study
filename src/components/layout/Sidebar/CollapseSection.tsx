@@ -3,12 +3,12 @@ import React from 'react';
 import { Disclosure, Transition } from '@headlessui/react';
 import Typography from '@/components/shared/atoms/Typography';
 import { SixChevronDown, SixChevronUp } from '@/components/shared/icons';
-import { SideBar } from '.';
+import { NestedSideBar } from '.';
 import SideBarLink from './SidebarLink';
 
 interface NestedSidebarLinkProps {
   nestedLinkTitle: string;
-  nested: SideBar[];
+  nested: NestedSideBar[];
 }
 
 const CollapseSection = ({ nestedLinkTitle, nested }: NestedSidebarLinkProps) => {
