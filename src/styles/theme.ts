@@ -6,8 +6,11 @@ export const breakPoints: Record<Screen, string> = {
   desktop: '1280px',
 };
 
+export const themeColor = {
+  coral: '#DE3919',
+} as const;
+
 const theme = {
-  colors: {},
   width: breakPoints,
   minWidth: breakPoints,
   maxWidth: breakPoints,

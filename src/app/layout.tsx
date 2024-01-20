@@ -1,4 +1,5 @@
 import type { Metadata } from 'next';
+import Header from '@/components/layout/Header';
 import '@/styles/globals.css';
 import { inter } from '@/styles/fonts/inter';
 
@@ -14,7 +15,10 @@ export default function RootLayout({
 }>) {
   return (
     <html lang='en'>
-      <body className={inter.className}>{children}</body>
+      <body className={inter.className}>
+        <Header />
+        {children}
+      </body>
     </html>
   );
 }

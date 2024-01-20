@@ -9,7 +9,12 @@ const config: Config = {
   ],
   theme: {
     screens: theme.screens,
-    extend: theme,
+    extend: {
+      colors: {
+        coral: '#DE3919',
+      },
+      ...theme,
+    },
   },
   plugins: [],
 };

@@ -3,10 +3,8 @@
 @tailwind utilities;
 
 @layer base {
-  :root {
-  }
   body {
-    @apply text-white bg-black min-h-screen;
+    @apply min-h-screen;
   }
   body.scroll-hidden {
     @apply overflow-hidden;
@@ -26,7 +24,4 @@
   .flexColCenter {
     @apply flexCol justify-center items-center;
   }
-}
-
-@layer utilities {
 }
