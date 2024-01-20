@@ -1,5 +1,5 @@
 import type { Config } from 'tailwindcss';
-import theme from './src/styles/theme';
+import theme, { themeColor } from './src/styles/theme';
 
 const config: Config = {
   content: [
@@ -11,7 +11,7 @@ const config: Config = {
     screens: theme.screens,
     extend: {
       colors: {
-        coral: '#DE3919',
+        ...themeColor,
       },
       ...theme,
     },

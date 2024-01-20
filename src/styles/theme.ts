@@ -8,6 +8,7 @@ export const breakPoints: Record<Screen, string> = {
 
 export const themeColor = {
   coral: '#DE3919',
+  navy: '#141010',
 } as const;
 
 const theme = {

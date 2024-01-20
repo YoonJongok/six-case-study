@@ -1,7 +1,7 @@
 import type { Metadata } from 'next';
 import Header from '@/components/layout/Header';
 import '@/styles/globals.css';
-import { inter } from '@/styles/fonts/inter';
+import { pretendardVariable } from '@/styles/fonts';
 
 export const metadata: Metadata = {
   title: 'Create Next App',
@@ -15,7 +15,7 @@ export default function RootLayout({
 }>) {
   return (
     <html lang='en'>
-      <body className={inter.className}>
+      <body className={pretendardVariable.className}>
         <Header />
         {children}
       </body>
