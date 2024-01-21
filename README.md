@@ -7,11 +7,12 @@
 - [x] git
 - [x] setup eslint, prettier, husky -
 - [x] setup tailwindcss w/ headlessUI
+- [x] setup script for path generator
+- [] setup fetch interceptor
+- [] setup storybook
 - Design system
   - [x] Typography & storybook
   - [] ...
-- [] setup storybook
-- [] setup fetch interceptor
 - [] setup next auth
 - [] set protected route with middleware
 - [] set zustand for stage management
@@ -26,5 +27,5 @@
   - [] update row
   - [] delete row
 - Generic Chart
+  - [x] Doughnut chart
   - [] Bar chart
-  - [] ...
