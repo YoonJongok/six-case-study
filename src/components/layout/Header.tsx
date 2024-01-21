@@ -1,7 +1,7 @@
 import Image from 'next/image';
 import Link from 'next/link';
 import { cn } from '@/utils/cn';
-import NavBar from './Header/NavBar';
+import NavBar from './NavBar';
 import Typography from '../shared/atoms/Typography';
 
 const Header = () => {
