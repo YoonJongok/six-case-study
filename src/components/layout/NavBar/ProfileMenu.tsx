@@ -1,3 +1,4 @@
+'use client';
 import Image from 'next/image';
 import { signOut } from 'next-auth/react';
 import { Fragment } from 'react';
@@ -9,7 +10,7 @@ interface ProfileMenuProps {
 
 const ProfileMenu = ({ image }: ProfileMenuProps) => {
   const handleLogoutBtnClick = async () => {
-    await signOut();
+    await signOut({ callbackUrl: '/sign-in' });
   };
 
   return (

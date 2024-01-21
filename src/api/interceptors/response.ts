@@ -1,5 +1,6 @@
 import { AxiosError, AxiosResponse } from 'axios';
-import { printResponseLog } from '@/utils/interceptor/logger';
+import { getErrorMessage } from '@/utils/interceptor/getErrorMessage';
+import { printErrorLog, printResponseLog } from '@/utils/interceptor/logger';
 
 export function logResponse(response: AxiosResponse) {
   const { config, data } = response;
@@ -15,6 +16,22 @@ export function logResponse(response: AxiosResponse) {
 
 export function unwrapResponse(response: AxiosResponse) {
   return response.data?.data ?? response.data;
+}
+
+export function logError(e: AxiosError) {
+  const url = e.config?.url;
+  const method = e.config?.method;
+
+  const errorMessage = getErrorMessage(e);
+
+  printErrorLog({
+    method,
+    endPoint: url,
+    errorMessage,
+    errorObj: e,
+  });
+
+  return Promise.reject(e);
 }
 
 export function processError(e: AxiosError) {

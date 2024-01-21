@@ -13,7 +13,7 @@
     @apply overflow-hidden;
   }
   main {
-    @apply min-h-screen bg-cover relative;
+    @apply min-h-screen  relative bg-gray-100;
   }
 }
 
@@ -22,7 +22,7 @@
     @apply flex flex-col;
   }
   .flexRowCenter {
-    @apply flexRow justify-center items-center;
+    @apply flex justify-center items-center;
   }
   .flexColCenter {
     @apply flexCol justify-center items-center;

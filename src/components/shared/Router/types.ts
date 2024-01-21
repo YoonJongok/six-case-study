@@ -1,5 +1,7 @@
 /* eslint-disable prettier/prettier */
 export type PathMap = {
-  '/': { path: undefined };
+  '/sign-in': { path: undefined };
+  '/analytics': { path: undefined };
   '/overview': { path: undefined };
+  '/': { path: undefined };
 };

@@ -1,34 +1,20 @@
-'use client';
-import { signIn, useSession } from 'next-auth/react';
-import React from 'react';
-import Typography from '@/components/shared/atoms/Typography';
+import LoginButton from '@/components/features/Auth/LoginButton';
 import { SixNotification } from '@/components/shared/icons';
+import { getServerAuthSession } from '@/utils/authOptions';
 import ProfileMenu from './ProfileMenu';
 
-const NavBar = () => {
-  const session = useSession();
-
-  const handleLoginBtnClick = async () => {
-    await signIn('credentials', {
-      username: 'kminchelle',
-      password: '0lelplR',
-      callbackUrl: '/',
-    });
-  };
-
+const NavBar = async () => {
+  const session = await getServerAuthSession();
+  console.log({ session });
   return (
     <div className='flex items-center gap-3 pr-5'>
-      {session.status === 'authenticated' ? (
+      {!session?.user ? (
+        <LoginButton isHeader />
+      ) : (
         <>
           <SixNotification stroke={'white'} strokeWidth={1} width={24} height={24} />
-          <ProfileMenu image={session.data.user.image} />
+          <ProfileMenu image={session.user.image} />
         </>
-      ) : (
-        <button onClick={handleLoginBtnClick}>
-          <Typography type='body3' className='text-white'>
-            Login
-          </Typography>
-        </button>
       )}
     </div>
   );

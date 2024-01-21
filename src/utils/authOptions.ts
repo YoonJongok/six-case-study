@@ -30,13 +30,13 @@ export const authOptions: NextAuthOptions = {
       },
     }),
   ],
+  secret: process.env.NEXTAUTH_SECRET,
   pages: {
     signIn: '/sign-in',
   },
   session: {
     strategy: 'jwt',
   },
-  secret: process.env.NEXTAUTH_SECRET,
   callbacks: {
     jwt: ({ token, user }) => {
       if (!user) return token;
