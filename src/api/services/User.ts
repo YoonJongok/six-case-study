@@ -4,7 +4,12 @@ import { axiosInstance } from '@/api/client';
 const ROUTE_V1 = '/auth';
 
 export const UserService: UserClient = {
-  login: async (request) => {
-    return await axiosInstance.post(`${ROUTE_V1}/login`, request);
+  login: async (payload) => {
+    // const user = {
+    //   ...payload,
+    // };
+
+    // return user;
+    return await axiosInstance.post(`${ROUTE_V1}/login`, payload);
   },
 };
