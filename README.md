@@ -29,3 +29,7 @@
 - Generic Chart
   - [x] Doughnut chart
   - [] Bar chart
+
+### Mock api
+
+https://dummyjson.com/docs/auth

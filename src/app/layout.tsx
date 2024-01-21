@@ -1,5 +1,6 @@
 import type { Metadata } from 'next';
 import '@/styles/globals.css';
+import SessionProvider from '@/context/SessionProvider';
 import { pretendardVariable } from '@/styles/fonts';
 
 export const metadata: Metadata = {
@@ -14,7 +15,9 @@ export default function RootLayout({
 }>) {
   return (
     <html lang='en'>
-      <body className={pretendardVariable.className}>{children}</body>
+      <body className={pretendardVariable.className}>
+        <SessionProvider>{children}</SessionProvider>
+      </body>
     </html>
   );
 }
